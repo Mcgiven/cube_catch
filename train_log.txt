@@ -1,0 +1,74 @@
+F:\MLprogram\venv\lib\site-packages\mlagents\torch_utils\torch.py:4: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+F:\MLprogram\venv\lib\site-packages\mlagents\torch_utils\torch.py:4: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+F:\MLprogram\venv\lib\site-packages\mlagents\torch_utils\torch.py:4: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+F:\MLprogram\venv\lib\site-packages\mlagents\torch_utils\torch.py:4: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+F:\MLprogram\venv\lib\site-packages\mlagents\torch_utils\torch.py:4: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+[INFO] Connected to Unity environment with package version 3.0.0-exp.1 and communication version 1.5.0
+[INFO] Connected to Unity environment with package version 3.0.0-exp.1 and communication version 1.5.0
+[INFO] Connected new brain: Runner?team=0
+[INFO] Connected new brain: Catcher?team=0
+[INFO] Connected new brain: Runner?team=0
+[INFO] Connected new brain: Catcher?team=0
+[INFO] Connected to Unity environment with package version 3.0.0-exp.1 and communication version 1.5.0
+[INFO] Connected to Unity environment with package version 3.0.0-exp.1 and communication version 1.5.0
+[INFO] Connected new brain: Runner?team=0
+[INFO] Connected new brain: Catcher?team=0
+[INFO] Connected new brain: Runner?team=0
+[INFO] Connected new brain: Catcher?team=0
+Traceback (most recent call last):
+  File "C:\Users\Aa156\AppData\Local\Programs\Python\Python310\lib\runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "C:\Users\Aa156\AppData\Local\Programs\Python\Python310\lib\runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "F:\MLprogram\venv\Scripts\mlagents-learn.exe\__main__.py", line 7, in <module>
+  File "F:\MLprogram\venv\lib\site-packages\mlagents\trainers\learn.py", line 270, in main
+    run_cli(parse_command_line())
+  File "F:\MLprogram\venv\lib\site-packages\mlagents\trainers\learn.py", line 266, in run_cli
+    run_training(run_seed, options, num_areas)
+  File "F:\MLprogram\venv\lib\site-packages\mlagents\trainers\learn.py", line 138, in run_training
+    tc.start_learning(env_manager)
+  File "F:\MLprogram\venv\lib\site-packages\mlagents_envs\timers.py", line 305, in wrapped
+    return func(*args, **kwargs)
+  File "F:\MLprogram\venv\lib\site-packages\mlagents\trainers\trainer_controller.py", line 172, in start_learning
+    self._reset_env(env_manager)
+  File "F:\MLprogram\venv\lib\site-packages\mlagents_envs\timers.py", line 305, in wrapped
+    return func(*args, **kwargs)
+  File "F:\MLprogram\venv\lib\site-packages\mlagents\trainers\trainer_controller.py", line 107, in _reset_env
+    self._register_new_behaviors(env_manager, env_manager.first_step_infos)
+  File "F:\MLprogram\venv\lib\site-packages\mlagents\trainers\trainer_controller.py", line 267, in _register_new_behaviors
+    self._create_trainers_and_managers(env_manager, new_behavior_ids)
+  File "F:\MLprogram\venv\lib\site-packages\mlagents\trainers\trainer_controller.py", line 165, in _create_trainers_and_managers
+    self._create_trainer_and_manager(env_manager, behavior_id)
+  File "F:\MLprogram\venv\lib\site-packages\mlagents\trainers\trainer_controller.py", line 125, in _create_trainer_and_manager
+    trainer = self.trainer_factory.generate(brain_name)
+  File "F:\MLprogram\venv\lib\site-packages\mlagents\trainers\trainer\trainer_factory.py", line 57, in generate
+    trainer_settings = self.trainer_config[behavior_name]
+  File "F:\MLprogram\venv\lib\site-packages\mlagents\trainers\settings.py", line 745, in __missing__
+    raise TrainerConfigError(
+mlagents.trainers.exception.TrainerConfigError: The behavior name Catcher has not been specified in the trainer configuration. Please add an entry in the configuration file for Catcher, or set default_settings.
+
+            ©´  ¨Z
+        ¨W¨Z¨p©¦¨e  ©¦©¦¨p¨Z¨Z
+    ¨W¨Z¨p©¦©¦©¦©¦©¦©¼  ¨p©¦©¦©¦©¦©¦¨p¨Z
+ ¨Z¨p©¦©¦©¦©¦©¦¨p¨`        ¨]¨p©¦©¦©¦©¦©¦¨Z¨Z                               ¨[¨[¨[
+ ¨p¨p¨p¨p¨Z©¦©¦¨j¨Z        ¨Z¨p©¦©¦¨[¨g¨g¨g¨p      ¨c¨g¨g¨p    ¨c¨g¨g¨g             ¨`¨`¨`  ¨c¨g¨g
+ ¨p¨p¨p¨p¨p¨p¨p¨p¨Z©¦¨p¨Z¨Z¨W¨p¨n©¦¨W¨g¨g¨g¨g¨g¨g¨g¨p      ¨c¨g¨g¨p    ¨c¨g¨g¨g ¨V¨g¨g¨Z¨[¨g¨g¨g¨[   ¨g¨g¨g ¨g¨g¨g¨g¨g¨g ¨c¨g¨g¨Z   ¨g¨g¨g
+ ¨p¨p¨p¨p©´  ¨]¨p¨p¨p¨p©¦¨W¨g¨g¨g¨a¨`  ¨o¨g¨g¨g¨p      ¨c¨g¨g¨p    ¨c¨g¨g¨g ¨c¨g¨g¨g¨] ¨]¨g¨g¨g  ¨g¨g¨g ¨]¨c¨g¨g¨`¨]  ¨o¨g¨g  ¨c¨g¨g
+ ¨p¨p¨p¨p©´     ¨]¨p¨p¨g¨g      ¨o¨g¨g¨g¨p      ¨c¨g¨g¨p    ¨c¨g¨g¨g ¨c¨g¨g¨p   ¨g¨g¨g  ¨g¨g¨g  ¨c¨g¨g     ¨g¨g¨g©°¨g¨g¨`
+ ¨p¨p¨p¨`       ¨p¨p¨g¨g      ¨]¨a¨g¨g¨p      ¨]¨g¨g¨g¨[¨Z¨W¨[¨g¨g¨g¨` ¨c¨g¨g¨p   ¨g¨g¨g  ¨g¨g¨g  ¨c¨g¨g¨j¨W    ¨g¨g¨g¨g¨g
+ ¨]   ¨W¨j¨Z    ¨p¨p¨g¨g   ¨W¨[¨[¨Z            ¨]¨a¨g¨g¨g¨g¨a¨`   ¨\¨a¨a¨`   ¨a¨a¨a  ¨a¨a¨a   ¨]¨g¨g¨g    ¨c¨g¨g¨g
+   ¨m¨p¨p¨p¨p¨p¨p¨j¨j¨p¨p¨g¨g¨[¨g¨g¨g¨g¨g¨g¨g¨a                                             ¨o¨g¨g¨g¨g
+      ¨]¨p¨p¨p¨p¨p¨p¨p¨g¨g¨g¨g¨g¨g¨a¨`
+          ¨]¨p¨p¨p¨g¨g¨g¨`
+             ¨]
+        
+ Version information:
+  ml-agents: 1.1.0,
+  ml-agents-envs: 1.1.0,
+  Communicator API: 1.5.0,
+  PyTorch: 2.0.1+cpu

@@ -1,0 +1,52 @@
+# Stage 1 + LSTM: Catcher learns against a completely immobile Runner.
+# Runner is HeuristicOnly in the prefab, so it receives zero actions and never moves.
+# viewRange raised to 30 (arena diagonal is ~28) so a static target is always within range
+# once the Catcher faces it.
+# LSTM memory: sequence_length 64 lets the policy remember where the target went after it
+# leaves the 180-degree cone. time_horizon raised to 128 so sequences are long enough.
+behaviors:
+  Catcher:
+    trainer_type: ppo
+    hyperparameters:
+      batch_size: 1024
+      buffer_size: 10240
+      learning_rate: 3.0e-4
+      beta: 0.005
+      epsilon: 0.2
+      lambd: 0.95
+      num_epoch: 3
+    network_settings:
+      normalize: true
+      hidden_units: 256
+      num_layers: 3
+      memory:
+        sequence_length: 64
+        memory_size: 128
+    reward_signals:
+      extrinsic:
+        gamma: 0.99
+        strength: 1.0
+    max_steps: 1000000
+    time_horizon: 128
+    summary_freq: 10000
+  Runner:
+    trainer_type: ppo
+    hyperparameters:
+      batch_size: 1024
+      buffer_size: 10240
+      learning_rate: 0.0
+      beta: 0.005
+      epsilon: 0.2
+      lambd: 0.95
+      num_epoch: 3
+    network_settings:
+      normalize: true
+      hidden_units: 256
+      num_layers: 3
+    reward_signals:
+      extrinsic:
+        gamma: 0.99
+        strength: 1.0
+    max_steps: 1000000
+    time_horizon: 128
+    summary_freq: 10000

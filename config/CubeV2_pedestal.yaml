@@ -1,0 +1,48 @@
+# Stage 1d: Catcher must jump onto a raised platform to reach the Runner.
+# Warm start from the 5-action Catcher that already learned to chase a grounded target
+# (observation 23 and 5 actions are unchanged, so the weights are compatible).
+# The new skill is timing the jump so momentum carries it onto the 3x1x3 platform.
+behaviors:
+  Catcher:
+    trainer_type: ppo
+    hyperparameters:
+      batch_size: 1024
+      buffer_size: 10240
+      learning_rate: 1.0e-4
+      beta: 0.005
+      epsilon: 0.2
+      lambd: 0.95
+      num_epoch: 3
+    network_settings:
+      normalize: true
+      hidden_units: 256
+      num_layers: 3
+    init_path: results/v2_pedestal/Catcher/Catcher-499987.pt
+    reward_signals:
+      extrinsic:
+        gamma: 0.99
+        strength: 1.0
+    max_steps: 1000000
+    time_horizon: 64
+    summary_freq: 10000
+  Runner:
+    trainer_type: ppo
+    hyperparameters:
+      batch_size: 1024
+      buffer_size: 10240
+      learning_rate: 0.0
+      beta: 0.005
+      epsilon: 0.2
+      lambd: 0.95
+      num_epoch: 3
+    network_settings:
+      normalize: true
+      hidden_units: 256
+      num_layers: 3
+    reward_signals:
+      extrinsic:
+        gamma: 0.99
+        strength: 1.0
+    max_steps: 1000000
+    time_horizon: 64
+    summary_freq: 10000
